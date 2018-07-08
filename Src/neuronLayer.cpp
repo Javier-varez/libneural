@@ -16,12 +16,3 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "linearNeuron.h"
-
-double LinearNeuron::activation(double input) {
-    return input;
-}
-
-LinearNeuron::LinearNeuron(double offset) : Neuron(offset) {
-
-}

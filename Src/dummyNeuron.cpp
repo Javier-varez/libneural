@@ -16,12 +16,16 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "linearNeuron.h"
+#include "dummyNeuron.h"
 
-double LinearNeuron::activation(double input) {
-    return input;
+double DummyNeuron::activation(double input) {
+    return offset;
 }
 
-LinearNeuron::LinearNeuron(double offset) : Neuron(offset) {
+void DummyNeuron::setValue(double value) {
+    this->offset = value;
+}
 
+DummyNeuron::DummyNeuron(double offset) : Neuron(offset) {
+    this->offset = offset;
 }

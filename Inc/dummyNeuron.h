@@ -16,12 +16,17 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "linearNeuron.h"
+#ifndef DUMMY_NEURON_H
+#define DUMMY_NEURON_H
 
-double LinearNeuron::activation(double input) {
-    return input;
-}
+#include "neuron.h"
 
-LinearNeuron::LinearNeuron(double offset) : Neuron(offset) {
+class DummyNeuron: public Neuron {
+private:
+    double activation(double input) override;   
+public:
+    DummyNeuron(double offset);
+    void setValue(double value);
+};
 
-}
+#endif
